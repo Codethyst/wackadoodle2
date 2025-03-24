@@ -1,0 +1,65 @@
+body {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text color */
+    height: 100vh; /* Full height */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.container {
+    text-align: center; /* Center text */
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 16px rgba(255, 255, 255, 1);
+    }
+    50% {
+        box-shadow: 0 0 17px rgba(255, 245, 240, 1);
+    }
+    100% {
+        box-shadow: 0 0 16px rgba(255, 250, 245, 1);
+    }
+}
+
+.center-button {
+    padding: 15px 30px; /* Button padding */
+    font-size: 20px; /* Button text size */
+    background-color: #1e1e1e; /* Button background */
+    color: #ffffff; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Initial glow effect */
+    transition: box-shadow 0.3s ease-in-out, outline 0.2s ease-in-out, transform 0.3s cubic-bezier(0.7, 0, 0.3, 1), outline-opacity 0.2s ease-in-out; /* Separate transitions */
+}
+
+.center-button:hover {
+    background-color: #282322; /* Darker on hover */
+    transform: scale(1.1); /* Expand the button */
+    outline: 2px solid #ffffff; /* White outline on hover */
+    outline-color: #ffffff; /* Set the outline color */
+    outline-opacity: 1; /* Make the outline fully opaque on hover */
+    transition: transform 0.3s ease-in-out; /* Slower transition on unhold */
+    animation: glow 1s infinite alternate; /* Apply the glow animation */
+}
+
+.center-button:active {
+    transform: scale(0.95) rotate(4deg); /* Shrink and rotate on click */
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8); /* More intense glow */
+    transition: transform 0.18s ease-in-out, outline-color 0.2s ease-in-out; /* Add outline-color transition */
+    outline-color: #ff0000; /* Change outline color to red on click */
+    background-color: #242022; /* Change button background on click */
+}
+
+body {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text color */
+    height: 100vh; /* Full height */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
